@@ -382,6 +382,7 @@ static void tps43_handle_swipe(const struct device *dev, uint8_t num_fingers, in
  * @param work Pointer to work structure
  */
 static void tps43_work_handler(struct k_work *work) {
+    LOG_INF("TPS43 RDY work handler triggered");
     struct tps43_drv_data *drv_data = CONTAINER_OF(work, struct tps43_drv_data, work);
     const struct device *dev = drv_data->dev;
     const struct tps43_config *config = dev->config;
